@@ -1,0 +1,73 @@
+.chat-head{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 65px;
+    background-color: black;
+}
+
+.back-icn{
+    display: inline-block;
+    width: 35px;
+    margin: 4px;
+    padding: 8px;
+    font-weight: 350;
+    font-size: 24px;
+    position: absolute;
+    left: 4px;
+}
+
+.chat-head .header-wrapper{
+    width: 80%;
+    display: inline-block;
+}
+
+.chat-head img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 8px 4px;
+}
+
+.head-username{
+    font-weight: 450;
+    margin: 5px;
+}
+
+.chat-head .status{
+    font-weight: 320;
+    color: rgb(68, 68, 68);
+    margin: 5px;
+    display: inline-block;
+}
+
+.status-indicator{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(41, 172, 41);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 535px){
+    .chat-head .header-wrapper{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .chat-head .header-wrapper{
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 820px){
+    .chat-head{
+        /* min-width: calc(100% - 585px); */
+        right: 0px;
+        left: unset;
+        width: 65% !important;
+    }
+}
+
+

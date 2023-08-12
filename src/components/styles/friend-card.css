@@ -1,0 +1,61 @@
+p{
+    background: none;
+}
+
+div{
+    background: none;
+}
+.friend-card{
+    display: inline-block;
+    width: 95%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.048);
+    padding: 7px;
+    border-radius: 13px;
+    margin: 2px 4px;
+}
+
+.friend-card .avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* border: 1px solid green; */
+    float: left;
+    margin: 7px 6px;
+}
+
+.friend-card .card-info{
+    clear: both;
+    display: inline-block;
+    width: 65%;
+    height: 98%;
+    margin-right: 1px;
+    background: none;
+}
+
+.friend-card p.username{
+    display: block;
+    text-align: left;
+    margin: 5px 8px 3px;
+    padding: 2.5px;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.friend-card p.message{
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    margin: 1px 8px;
+    padding: 2px;
+    color: rgb(219, 219, 219);
+}
+
+.friend-card .notification{
+    color: black;
+    background-color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-block;
+}

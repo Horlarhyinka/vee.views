@@ -1,0 +1,151 @@
+.register{
+    align-items: center;
+    display: inline-flex;
+    width: 95%;
+}
+
+input{
+    background: none !important;
+    border: none;
+    text-align: left;
+}
+
+input:focus{
+    outline: none;
+    background: none !important;
+}
+
+input:active{
+    outline: none;
+    background: none;
+}
+
+.register-pic{
+    display: inline-block;
+    scale: 70%;
+    background-color: rgba(255, 255, 255, 0.022);
+    border-radius: 50%;
+}
+
+.register-pic img{
+    border-radius: 50%;
+    background: none;
+}
+
+.register button, .login button{
+    clear: both;
+    height: 40px;
+    width: 95%;
+    display: inline-block;
+    margin: 18px 7px 8px;
+    font-size: 15px;
+    font-weight: 630;
+    border: none;
+    border-radius: 3px;
+    background-color: blue;
+}
+
+.register a{
+    text-decoration: none;
+    color: rgb(57, 57, 249);
+    font-weight: 500;
+}
+
+.register-form{
+    display: inline-block;
+    border: 0.1px solid rgba(255, 255, 255, 0.046);
+    width: 95%;
+    max-width: 320px;
+    text-align: left;
+
+}
+
+.register-form h2, .login-form h2{
+    font-weight: 400;
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    padding: 5px 4px;
+    margin: 12px 5px 3px;
+}
+
+.register-form h2 + p, .login-form h2 + p{
+    font-size: 12px;
+    font-weight: 520px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.register p, .login p{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.589);
+    text-align: left;
+    padding: 5px 4px;
+    margin: 0px 5px 22px;
+}
+
+.register-input-wrapper{
+    border: 1px solid rgba(194, 194, 194, 0.155);
+    height: 35px;
+    border-radius: 3px;
+    margin: 4px 5px;
+    justify-content: space-between;
+    padding: 8px 0px;
+}
+
+.register-input-icn-wrapper{
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    margin: 2px 4px;
+    align-items: center;
+}
+
+.register-input-wrapper input{
+    background: none !important;
+    width: 80%;
+    align-self: center;
+    height: 90%;
+    float: right;
+    margin-right: 3px;
+    color: white;
+}
+
+#username{
+    background-color: black;
+}
+
+.register-input-icn-wrapper .icn{
+    width: 90%;
+    height: 90%;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 840px){
+    .register-pic{
+        display: none;
+    }
+
+    .register, .login{
+        display: block;
+        text-align: center;
+
+    }
+
+    .register-form, .login-form{
+        margin-top: 28px;
+    }
+}
+
+.login{
+    text-align: center;
+}
+
+.login .register-form{
+    margin-top: 28px;
+}
+
+.register a, .login a{
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+}

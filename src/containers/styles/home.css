@@ -1,0 +1,37 @@
+.home h1{
+    display: block;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    font-size: 36px;
+    width: 90%;
+    margin: 35px 15px;
+}
+
+.home .vee-s{
+    background-color: goldenrod;
+    color: white;
+    margin: 25px 35px;
+    padding: 3px 15px;
+    border-radius: 12px;
+}
+
+.home p{
+    font-weight: 300;
+}
+
+.home img{
+    scale: calc(85%);
+    position: relative;
+    width: 95%;
+}
+
+.home button{
+    background: none;
+}
+
+.home button.btn:hover{
+    background: rgba(255, 255, 255, 0.13);
+    transition: background-color 0.22s;
+}

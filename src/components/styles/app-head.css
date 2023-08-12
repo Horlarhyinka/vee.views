@@ -1,0 +1,89 @@
+.app-head{
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: inherit;
+    height: 65px;
+    background-color: rgb(0, 0, 17);
+    z-index: 1;
+}
+
+.app-logo{
+    display: inline-block;
+}
+
+.app-page-title{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 540;
+}
+
+.handburger{
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.456);
+    border-radius: 50%;
+    height: 50%;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.handburger .icn{
+    color: rgba(255, 255, 255, 0.824);
+    background: none;
+    width: 90%;
+    height: 90%;
+    font-size: 22px;
+}
+
+.menu{
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    height: 100vh;
+    width: 30%;
+    min-width: 306px;
+    background-color: rgb(1, 1, 25);
+
+}
+
+.menu a{
+    display: block;
+    height: 20px;
+    padding: 10px 15px;
+    text-align: left;
+    margin: 1px;
+    font-size: 18px;
+    text-decoration: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.763);
+}
+
+.menu a:hover{
+    background-color: rgba(24, 24, 27, 0.434);
+}
+
+.menu .close{
+    display: inline-block;
+    margin-top: 200px;
+    /* font-size: 22px; */
+    height: 50px;
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.624);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.698);
+}
+
+.menu .close .icn{
+    width: 85%;
+    height: 85%;
+    font-size: 20px;
+    font-weight: 480;
+    background: none;
+    color: rgba(255, 255, 255, 0.67);
+}

@@ -1,0 +1,10 @@
+button.btn{
+    width: 90%;
+    max-width: 380px;
+    height: 60px;
+    font-size: 24px;
+    border-radius: 18px;
+    color: white;
+    font-weight: bolder;
+    border: 1.5px solid white;
+}

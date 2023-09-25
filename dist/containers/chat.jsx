@@ -9,10 +9,6 @@ export default class Chat extends React.Component {
             <ChatHead />
             <ChatCard timestamp={"12:00"} text={"Hello"}/>
             <ChatCard timestamp={"12:00"} text={"Hello"}/>
-            <ChatCard timestamp={"12:00"} text={"Hello"}/>
-            <ChatCard timestamp={"12:00"} text={"Hello"}/>
-            <ChatCard timestamp={"12:00"} text={"Hello"}/>
-            <ChatCard timestamp={"12:00"} text={"Hello"}/>
             <ChatInputs />
         </div>;
     }

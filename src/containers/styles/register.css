@@ -4,10 +4,10 @@
     width: 95%;
 }
 
-input{
-    background: none !important;
-    border: none;
+.login input, .register input{
     text-align: left;
+    padding: 3px;
+    border: none;
 }
 
 input:focus{
@@ -19,6 +19,7 @@ input:active{
     outline: none;
     background: none;
 }
+
 
 .register-pic{
     display: inline-block;
@@ -148,4 +149,11 @@ input:active{
     text-decoration: none;
     color: blue;
     font-weight: 600;
+}
+
+.register .message, .login .message{
+    color: rgb(255, 44, 44);
+    font-size: 12px;
+    font-weight: 480;
+    margin-bottom: 8px;
 }

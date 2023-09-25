@@ -11,7 +11,9 @@ export default class ChatInputs extends React.Component {
                 <input type="text" name="chat-text-input" placeholder="type here..." className="chat-text-input"/>
                 <div className="icn-input"></div>
             </div>
-            <button className="send-btn"><Icon className="icn" icon="cil:send"/></button>
+            <button className="send-btn">
+            <Icon icon="bi:send" className="icn"/>
+            </button>
         </form>;
     }
 }

@@ -5,10 +5,10 @@
     position: relative;
     float: left;
     padding: 4px;
-    border-radius: 1px 12px 12px 12px;
     max-width: 60%;
     background-color: rgba(255, 255, 255, 0.052);
-    margin: 3px 12px;
+    margin: 4px 12px;
+    border-radius: 0px 8px 8px 8px;
 }
 
 .chat-card img{
@@ -22,13 +22,14 @@
     margin: 2px 4px !important;
     background: none;
     font-size: 12px;
+    
 }
 
 .chat-card.self{
     float: right;
-    border-radius: 24px 24px 5px 24px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.859);
+    border-radius: 8px 8px 2px 8px;
+    background-color: rgba(225, 225, 225, 0.993);
+    
 }
 
 .chat-card.self .chat-text{
@@ -39,11 +40,19 @@
     font-size: 8px;
     display: block;
     text-align: left;
-    padding-left: 12px;
+    padding-left: 8px;
     background: none;
     color: rgba(255, 255, 255, 0.749);
+    margin: 2px 4px;
 }
 
 .chat-card.self .chat-delivery-time{
     color: black;
+}
+
+.chat-card img{
+    /* border: 1px solid red; */
+    width: 100px;
+    height: 65px;
+    display: block;
 }

@@ -1,0 +1,43 @@
+
+.post-preview{
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: calc(100vh - 65px);
+}
+.post-preview .main{
+    width: 100%;
+
+}
+
+
+.post-preview .main .post-card{
+    width: 95%;
+    max-width: 95%;
+    margin: 10px 5px 8px;
+    display: inline-block;
+}
+
+.post-preview .replies{
+    overflow-y: scroll;
+    display: block;
+    width: 98%;
+    text-align: left;
+}
+
+.post-preview .replies .post-card{
+    margin: 4px 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.019);
+    border-radius: 0px 8px 8px 8px;
+    max-width: 540px;
+}
+
+.post-preview .replies a.profile{
+    background: none;
+    border: none;
+}
+
+.post-preview .replies aside{
+    background: none;
+}

@@ -10,9 +10,13 @@ div{
     width: 95%;
     height: 80px;
     background-color: rgba(255, 255, 255, 0.048);
-    padding: 7px;
-    border-radius: 13px;
-    margin: 2px 4px;
+    padding: 12px 7px;
+    border-radius: 4px;
+    margin: 0px 4px;
+}
+
+.friend-card:hover{
+    background-color: rgb(29, 29, 29);
 }
 
 .friend-card .avatar{
@@ -48,7 +52,7 @@ div{
     font-size: 12px;
     margin: 1px 8px;
     padding: 2px;
-    color: rgb(219, 219, 219);
+    color: rgb(118, 118, 118);
 }
 
 .friend-card .notification{

@@ -1,0 +1,44 @@
+.chats-list .searchbar{
+    display: block !important;
+    height: 32px;
+}
+
+.chats-list .searchbar .icn{
+    float: right;
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.148);
+    clear: both;
+}
+
+.chats-list .searchbar .icn:first-child{
+    font-size: 24px;
+    background: none;
+}
+
+.chats-list .searchbar input{
+    border: 1px solid rgba(255, 255, 255, 0.148);
+    height: 100%;
+    padding: 4px;
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-weight: 430;
+}
+
+.friend-card.user-card span{
+    cursor: pointer;
+}
+
+.searchbar input::placeholder{
+    font-size: 14px;
+    font-weight: 420;
+}
+
+.users-list{
+    display: flex;
+    width: 98%;
+    overflow-x: scroll;
+    /* height: 145px; */
+}

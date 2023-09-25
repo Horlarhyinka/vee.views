@@ -1,68 +1,47 @@
-    {   "me":{
-        "socketId": "000",
-        "username": "my_username",
-        "email": "mymail@gmail.com",
-        "chats":["000-289", "111-232", "121-212"],
-        "rooms": ["123-526", "514-273", "727-123"]
-    },
-    "friends":[
-        {
-            "username": "friend 1",
-            "email": "friend1@gmail.com",
-            "socketId": "001",
-            "avatar": "friend01.png"
-        },
-        {
-            "username": "friend 2",
-            "email": "friend2@gmail.com",
-            "socketId": "002",
-            "avatar": "friend02.png"
-        },
-        {
-            "username": "friend 3",
-            "email": "friend3@gmail.com",
-            "socketId": "003",
-            "avatar": "friend03.png"
-        },
-        {
-            "username": "friend 4",
-            "email": "friend4@gmail.com",
-            "socketId": "004",
-            "avatar": "friend04.png"
-        }
-    ],
+{
+  "me": {
+    "socketId": "000",
+    "username": "my_username",
+    "email": "mymail@gmail.com",
     "chats": [
-        {"000-289":{
-            "target": "001",
-            "messages": [
-                {
-                    "sender": "000",
-                    "body": "hey boss",
-                    "timestamps":{
-                        "sentat": "02:03",
-                        "readat": "23:23"
-                    },
-                    "read": false
-                },
-                {
-                    "sender": "000",
-                    "body": "hey boss",
-                    "time": "12-02-23",
-                    "read": false
-                },
-                {
-                    "sender": "000",
-                    "body": "hey boss",
-                    "time": "12-02-23",
-                    "read": false
-                },
-                {
-                    "sender": "000",
-                    "body": "hey boss",
-                    "time": "12-02-23",
-                    "read": false
-                }
-            ]
-        }}
+      "000-289",
+      "111-232",
+      "121-212"
+    ],
+    "communities": [
+      "001",
+      "002"
     ]
+  },
+  "friends": [
+    {
+      "_id": "001",
+      "username": "friend 1",
+      "email": "friend1@gmail.com",
+      "socketId": "001",
+      "avatar": "friend01.png"
+    },
+    {
+      "_id": "002",
+      "username": "friend 2",
+      "email": "friend2@gmail.com",
+      "socketId": "002",
+      "avatar": "friend02.png"
+    },
+    {
+      "_id": "003",
+      "username": "friend 3",
+      "email": "friend3@gmail.com",
+      "socketId": "003",
+      "avatar": "friend03.png"
+    },
+    {
+      "_id": "004",
+      "username": "friend 4",
+      "email": "friend4@gmail.com",
+      "socketId": "004",
+      "avatar": "friend04.png"
+    }
+  ],
+  "chats": []
 }

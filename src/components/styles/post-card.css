@@ -1,0 +1,79 @@
+.post-card{
+    display: block;
+    width: 80%;
+    max-width: 580px;
+    text-align: left;
+    border: 1px solid rgba(20, 20, 20, 0.549);
+    margin: 12px;
+    margin-left: 10%;
+    padding: 8px;
+    height: auto;
+}
+
+.post-card a{
+    text-decoration: none;
+}
+
+.post-card .body{
+    display: block;
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    text-align: left;
+    word-wrap: break-word;
+    line-break: normal;
+    margin-right: 4px;
+    font-size: 14px;
+    color: rgb(185, 185, 185);
+    font-weight: 450;
+}
+
+.post-card .body + img{
+    display: inline-block;
+    width: calc(95% - 40px);
+    aspect-ratio: 2;
+    padding: 3px;
+    border: 1px solid rgb(25, 25, 25);
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+
+.post-card .post-time{
+    color: rgb(100, 100, 100);
+    font-size: 12px;
+    text-align: right;
+}
+
+.post-card .actions{
+    display: inline-flex;
+    margin: 5px 45px;
+    margin-right: 4px;
+    width: calc(100% - 45px);
+    height: 35px;
+    justify-content: space-evenly;
+}
+
+.post-card .action{
+    display: inline-block;
+}
+
+.post-card .action span{
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 460;
+    color: rgb(86, 86, 86);
+}
+
+.post-card .action .icn{
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.post-card .rtw{
+    font-size: 24px !important;
+    margin-top: 4px !important;
+}
+
+.post-card .icn.active{
+    color: blue !important;
+}

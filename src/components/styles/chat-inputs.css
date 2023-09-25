@@ -3,7 +3,7 @@
     width: 96%;
     display: inline-block;
     position: fixed;
-    bottom: 12px;
+    bottom: 0px;
     left: 4px;
 }
 
@@ -14,7 +14,6 @@
     padding-top: 12px;
     margin: 4px 5px;
     color: white;
-    
 }
 
 .text-icn-input{
@@ -44,15 +43,9 @@
 .send-btn{
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.112);
     border-radius: 50%;
-    position: inherit;
-    border: none;
-    margin: 4px 5px;
-    color: white;
-    float: right;
-    margin-top: 12px;
-    border: 1px solid red;
+    margin-left: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.181);
 }
 
 .send-btn .icn{
@@ -61,15 +54,9 @@
     color: white;
 }
 
-.file-select .icn{
-    background: none;
-    font-size: 22px;
-}
-
 @media screen and (max-width: 315px){
     .chat-text-input{
         margin: 9px 5px;
-
     }
     .text-icn-input{
         left: 34px;
@@ -83,4 +70,12 @@
         right: 0px !important;
         width: 63%;
     }
+}
+
+.file-select input{
+    border: 1px solid red;
+    width: 40px;
+    height: 35px;
+    opacity: 0;
+    position: fixed;
 }

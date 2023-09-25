@@ -1,0 +1,24 @@
+.profile{
+    border-bottom: 0.2px solid rgba(38, 38, 38, 0.383);
+    height: 32px;
+    display: flex;
+    padding: 4px;
+    text-decoration: none;
+    color: rgba(205, 205, 205, 0.915);
+}
+
+.profile .avatar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.profile .username{
+    height: 16px !important;
+    margin: 0px ;
+    margin-left: 8px;
+    font-size: 16px;
+    color: rgba(209, 209, 209, 0.529);
+    font-weight: 480;
+}

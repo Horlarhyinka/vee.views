@@ -1,0 +1,11 @@
+.comment-page .post-card{
+    display: inline-block;
+    margin: 12px 0px;
+    width: 100%;
+    max-width: 90%;
+}
+
+.comment-page .new-post{
+    width: 100%;
+    max-width: 90%;
+}

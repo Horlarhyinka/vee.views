@@ -1,52 +1,35 @@
 import React from "react";
-import "./styles/app-head.css";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
+import "./styles/app-head.css"
 
 interface props{
-    title?: string
-
+    hasSearch?: boolean
+    handleSearch?: Function
+    searchRef?: React.RefObject<HTMLInputElement>
+    searchplaceholder?: string
 }
-
 interface state{
-    menuActive: boolean
+
 }
 
 class AppHead extends React.Component<props, state>{
-
-    setMenu = () =>{
-        console.log("setting")
-        const menusState = this.state?.menuActive;
-        if(menusState){
-            this.setState({menuActive: false})
-        }else{
-            this.setState({menuActive: true})
-        }
-    }
-    HandburgerIcon = !this.state?.menuActive? <Icon icon="ci:menu-duo-md" className="icn" />: <Icon icon="line-md:close-small" className="icn" />;
     render(){
-        return <><div className="app-head" >
-            {/* <span className="app-logo">
-                L
-            </span> */}
-            <h1 className="app-page-title">{this.props.title}</h1>
-            <div onClick={this.setMenu} className="handburger">
-                {/* <Icon icon="ci:menu-duo-md" className="icn" /> */}
-                {/* <Icon icon="line-md:close-small" className="icn" /> */}
-                {/* {this.HandburgerIcon} */}
-                {!this.state?.menuActive? <Icon icon="ci:menu-duo-md" className="icn" />: <Icon icon="line-md:close-small" className="icn" />}
-                </div>
+        return <div className="app-head">
+            <div className="app-logo">
+            </div>
+            {this.props.hasSearch && <div className="search-box" >
+                <input type="text" placeholder={this.props.searchplaceholder || "search here..."} ref={this.props.searchRef} />
+                <Icon className="icn" icon="fluent:search-16-regular" />
+                </div>}
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chats">Chats</a></li>
+                <li><a href="/profile">Profile</a></li>
+
+                {/* <li>Developer</li> */}
+            </ul>
         </div>
-        {this.state?.menuActive && (<div className="menu" >
-    <a href="#">Home</a>
-    <a href="#">chats</a>
-    <a href="#">communities</a>
-    <a href="#">notifications</a>
-    <div className="close" onClick={this.setMenu} >
-        <Icon icon="line-md:close-small" className="icn" />
-    </div>
-</div>)}
-        </>
     }
 }
 
-export default AppHead;
+export default AppHead

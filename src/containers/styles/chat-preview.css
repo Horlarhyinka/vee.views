@@ -1,0 +1,26 @@
+
+.chatpreview .chat{
+    display: block;
+    width: 100%;
+    padding-top: 85px;
+}
+
+
+.chatpreview .chat-head{
+    display: inline-block;
+    margin: 0px;
+    position: fixed;
+    top: 0px;
+    display: block;
+    width: 100% !important;
+    z-index: 1;
+}
+
+
+
+@media screen{
+.chatpreview .chat-input{
+    width: 100% !important;
+}
+}
+

@@ -41,6 +41,8 @@ function App() {
               <Route path="/posts/:postId" element={<RequireAuth NodeElement={<PostPreview socket={appSocket} />} />} />
               <Route path="/profile" element={<RequireAuth NodeElement={<Profile editable />} />} />
               <Route path="/users/:userId" element={<RequireAuth NodeElement={<div className="user-preview" ><Profile /></div>} />} />
+              <Route path="*" element={<div><AppHead/><h1 style={{fontFamily:"fantasy", fontSize:"18px",margin:"30px 4px"}} >page not found</h1></div>} />
+              
         </Routes>
         </div>
       </Provider>

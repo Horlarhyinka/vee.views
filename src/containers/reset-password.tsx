@@ -57,7 +57,7 @@ const ResetPassword = () =>{
         return <div className="login">
             <form className="register-form">
                 <h2>reset password</h2>
-                <p>create a new password. strong passwords with greater than or eqaul to 6 characters are recommended</p>
+                <p style={{fontSize:"12px", fontWeight:"400", color:"rgb(111,111,111)"}} >Strong passwords with greater than or eqaul to 6 characters are recommended</p>
                 <p className="message">{errMessages?.general}</p>
                 <div className="register-input-wrapper" >
                     <div className="register-input-icn-wrapper" >

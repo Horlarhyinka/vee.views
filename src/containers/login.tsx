@@ -45,9 +45,9 @@ const Login= () =>{
             if(window.location.href.includes("/login")){
                 window.location.assign("/")
             }
-            // else{
-            //     console.log(window.location)
-            // }
+            else{
+                console.log(window.location.reload())
+            }
         }).catch(ex=>{
             const message = ex.response?.data.message?ex.response?.data.message: ex.message
             console.log(message)
@@ -64,16 +64,17 @@ const Login= () =>{
                     <div className="register-input-icn-wrapper" >
                     <Icon className="icn" icon="fontisto:email" />
                     </div>
-                    <input onChange={()=>handleFieldChange(emailRef, emailRegex, "email")} ref={emailRef} type="text" placeholder="enter your email adress" />
+                    <input autoFocus={false} autoComplete="off" onChange={()=>handleFieldChange(emailRef, emailRegex, "email")} ref={emailRef} type="text" placeholder="enter your email adress" />
                 </div>
                 <p className="message">{errMessages?.email}</p>
                 <div className="register-input-wrapper" >
                     <div className="register-input-icn-wrapper" >
                     <Icon className="icn" icon="carbon:password" />
                     </div>
-                    <input onChange={()=>handleFieldChange(passwordRef, passwordRegex, "password")} ref={passwordRef} type="text" placeholder="enter a password" />
+                    <input className="pwd" autoFocus={false} autoComplete="off" onChange={()=>handleFieldChange(passwordRef, passwordRegex, "password")} ref={passwordRef} type="text" placeholder="enter a password" />
                 </div>
                 <p className="message">{errMessages?.password}</p>
+                <a href="/forget-password" style={{fontSize: "14px", fontWeight: 420, marginLeft: "8px", color:"red"}} >forget-pasword</a>
                 <button onClick={(e)=>handleSubmit(e)} >login</button>
                 <p>don't have an account?<a href="/register" > sign up.</a></p>
             </form>

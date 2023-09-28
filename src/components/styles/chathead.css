@@ -2,8 +2,9 @@
     display: block;
     width: 100%;
     position: fixed;
-    top: 65px;
+    top: 62px;
     background-color: black;
+    z-index: 1;
 }
 
 .back-icn{
@@ -66,7 +67,7 @@
         /* min-width: calc(100% - 585px); */
         right: 0px;
         left: unset;
-        width: 65% !important;
+        width: 63% !important;
     }
 }
 

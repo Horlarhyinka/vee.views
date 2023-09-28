@@ -5,10 +5,11 @@ p{
 div{
     background: none;
 }
+
 .friend-card{
-    display: inline-block;
+    display: inline-flex;
     width: 95%;
-    height: 80px;
+    height: 45px;
     background-color: rgba(255, 255, 255, 0.048);
     padding: 12px 7px;
     border-radius: 4px;
@@ -20,12 +21,12 @@ div{
 }
 
 .friend-card .avatar{
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     /* border: 1px solid green; */
     float: left;
-    margin: 7px 6px;
+    margin: 0px 6px 7px;
 }
 
 .friend-card .card-info{
@@ -40,19 +41,22 @@ div{
 .friend-card p.username{
     display: block;
     text-align: left;
-    margin: 5px 8px 3px;
-    padding: 2.5px;
+    margin: 0px 8px 3px;
+    padding: 3px;
     width: auto;
     word-wrap: break-word;
+    font-size: 14px;
+    font-weight: 480;
 }
 
 .friend-card p.message{
     display: block;
     text-align: left;
     font-size: 12px;
-    margin: 1px 8px;
     padding: 2px;
+    margin: 0px 8px 12px;
     color: rgb(118, 118, 118);
+    font-weight: 460;
 }
 
 .friend-card .notification{

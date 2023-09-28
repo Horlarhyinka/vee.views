@@ -1,9 +1,8 @@
-import React, {RefObject, useEffect, useState} from "react";
+import React, {RefObject, useState} from "react";
 import FriendCard from "../components/friend-card";
 import type { chat_type } from "./chats.types";
 import "./styles/chats-list.css"
 import { Icon } from '@iconify/react';
-import axios from "axios";
 import type { user_profile } from "./chats.types";
 import {getUnreadCount} from "../utils/funcs"
 import NotFriendCard from "../components/non-friend-card";
@@ -11,11 +10,12 @@ import NotFriendCard from "../components/non-friend-card";
 interface props{
     chats: chat_type[]
     message?: string
-    handleChatClick: <T>(id: string)=>void
+    handleChatClick: (id: string)=>void
     handleAddChat: (id: string)=>void
     users: user_profile[]
     searchRef: RefObject<HTMLInputElement>
     handleSearch:()=>void
+    open?:boolean | string
 }
 const ChatsList = (props: props) =>{
 
@@ -37,10 +37,10 @@ const ChatsList = (props: props) =>{
             })
     const userslist = 
     props.users.map((u)=>{
-    return <NotFriendCard user={u} handleAddChat={props.handleAddChat} />})
+    return <NotFriendCard user={u} key={u._id} handleAddChat={props.handleAddChat} />})
 
 
-return <div className="friends-card-list chats-list" >
+return <div className={`friends-card-list chats-list ${props.open}`} >
         {
            props.message?<div className="err" >
             <span>??</span>

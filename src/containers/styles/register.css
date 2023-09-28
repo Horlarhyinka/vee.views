@@ -8,6 +8,23 @@
     text-align: left;
     padding: 3px;
     border: none;
+    /* transition: background-color 5000s ease-in-out 0s;
+    color: white;
+    background-color: #fff; */
+}
+
+/* @font-face {
+    font-family: 'password';
+    src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+}
+
+.login .pwd, .register .pwd{
+    font-family: 'password';
+    
+} */
+
+.login input::placeholder, .register input::placeholder{
+    color: rgb(69, 69, 69);
 }
 
 input:focus{
@@ -157,3 +174,9 @@ input:active{
     font-weight: 480;
     margin-bottom: 8px;
 }
+
+.register input:-webkit-autofill{
+    background-color: black !important;
+    color: white;
+}
+

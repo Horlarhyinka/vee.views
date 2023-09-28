@@ -15,7 +15,6 @@ export const getHandleLike = (socket: app_socket_type) =>(e: React.MouseEvent<HT
 }
 
 export const trimTosize = (text:string, count: number) =>{
-    console.log("before trim", text.length, text.slice(0,count+1))
     if(text.length > count)return text.slice(0,count+1) + "..."
     return text
 }

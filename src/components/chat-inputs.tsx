@@ -41,7 +41,7 @@ export default class ChatInputs extends React.Component<props, state>{
             }
             const url = await toBase64(file) 
             const thumbnail = await generateThumbnail({url: String(url), type})
-            const fileObj = {url: url as string, size, format: type.slice(type.lastIndexOf("/"), type.length), name, thumbnail}
+            const fileObj = {url: thumbnail as string, size, format: type.slice(type.lastIndexOf("/"), type.length), name}
             const data = {file: fileObj, body: ""}
             this.props.emitMessage(data)
         }

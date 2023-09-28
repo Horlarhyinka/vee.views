@@ -85,7 +85,7 @@ const Register = () =>{
                     <div className="register-input-icn-wrapper" >
                     <Icon className="icn" icon="carbon:password" />
                     </div>
-                    <input ref={passwordRef} onChange={()=>handleFieldChange(passwordRef, passwordRegex, "password")} type="text" placeholder="enter a password" />
+                    <input className="pwd" ref={passwordRef} onChange={()=>handleFieldChange(passwordRef, passwordRegex, "password")} type="text" placeholder="enter a password" />
                 </div>
                 <p className="message">{errMessages.password}</p>
                 <button onClick={(e)=>handleSubmit(e)} >register</button>

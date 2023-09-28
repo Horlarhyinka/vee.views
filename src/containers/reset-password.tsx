@@ -14,7 +14,7 @@ const ResetPassword = () =>{
     const params = useParams()
     const token = params.token!
 
-    const url = "http://localhost:8000/api/v1/auth/reset-password"
+    const url = process.env.REACT_APP_API_URL + "/auth/reset-password"
 
     const [errMessages, setErrMessages] = useState<{password?: string, confirm?: string, general?: string}>()
 
@@ -63,14 +63,14 @@ const ResetPassword = () =>{
                     <div className="register-input-icn-wrapper" >
                     <Icon className="icn" icon="carbon:password" />
                     </div>
-                    <input onChange={()=>validateChange(testPass, "password")} ref={passwordRef} type="text" placeholder="enter a password" />
+                    <input className="pwd" onChange={()=>validateChange(testPass, "password")} ref={passwordRef} type="text" placeholder="enter a password" />
                 </div>
                 <p className="message">{errMessages?.password}</p>
                 <div className="register-input-wrapper" >
                     <div className="register-input-icn-wrapper" >
                     <Icon className="icn" icon="carbon:password" />
                     </div>
-                    <input onChange={()=>validateChange(testConfirm, "confirm")} ref={confirmRef} type="text" placeholder="confirm your password" />
+                    <input className="pwd" onChange={()=>validateChange(testConfirm, "confirm")} ref={confirmRef} type="text" placeholder="confirm your password" />
                 </div>
                 <p className="message">{errMessages?.confirm}</p>
                 <button onClick={(e)=>handleSubmit(e)} >reset password</button>

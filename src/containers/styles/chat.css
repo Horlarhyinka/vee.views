@@ -1,8 +1,17 @@
 .chat{
     padding-top: 85px;
-    height: calc(100vh - 85px);
+    height: calc(100vh - 230px);
     width: 100%;
     /* border: 1px solid red; */
     overflow-y: scroll;
     background-color: rgba(12, 10, 10, 0.786);
+    padding-bottom: 15px;
+}
+
+.chat.false{
+    display: none;
+}
+
+.chat.true{
+    width: 98%;
 }

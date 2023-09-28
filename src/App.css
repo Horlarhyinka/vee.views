@@ -3,16 +3,37 @@
     text-align: center;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:active, 
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:default{
--webkit-background-clip: text !important;
--webkit-text-fill-color: blue !important;
-background-color: black !important;
+@font-face {
+    font-family: 'password';
+    src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+}
+
+.pwd{
+    font-family: 'password';
+    
+}
+
+.pwd::placeholder{
+    font-family:'Times New Roman', Times, serif
 }
 
 .App{
     padding-top: 65px;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(17, 17, 17, 0.519);
+}
+
+::-webkit-scrollbar-button{
+    background: none;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(73, 73, 73);
+    border-radius: 8px;
 }

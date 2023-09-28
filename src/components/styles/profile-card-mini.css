@@ -14,11 +14,19 @@
     margin-left: 8px;
 }
 
+.profile span.avatar{
+    font-size: 14px;
+    padding: 1.5px;
+    padding-top: 2.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
 .profile .username{
     height: 16px !important;
     margin: 0px ;
     margin-left: 8px;
-    font-size: 16px;
-    color: rgba(209, 209, 209, 0.529);
+    font-size: 14px;
+    color: rgb(209, 209, 209);
     font-weight: 480;
 }

@@ -31,19 +31,29 @@ const ChatsPage = (props: prop) =>{
         const [usersState, setUsersState] = useState<user_profile[]>(useAppSelector(state=>state.chat.users))
         const dispatch = useAppDispatch()
         const [selected, setSelected] = useState<chat_type>()
+        const [chatOpen, setChatOpen] = useState<boolean | string>("")
+        const [friendListOpen, setFriendListOpen] = useState<boolean | string>("")
 
-        const handleChatClick = (id: string) =>{
 
-            if(window.innerWidth <= 820){
-                window.location.assign("/chats/"+String(id))
-            }else{
-                const target = chats.findIndex((chat)=>String(chat._id) === String(id))
-                setSelected(chats[target])
-            if(target<0)return
-            props.socket.emit("read", {chatId: chats[target]._id})
-            }
+        const openChat = () =>{
+            setChatOpen(true)
+            setFriendListOpen(false)
         }
 
+        const closeChat = () =>{
+            setChatOpen(false)
+            setFriendListOpen(true)
+            setSelected(undefined)
+        }
+
+        const handleChatClick = (id: string) =>{
+                const target = chats.findIndex((chat)=>String(chat._id) === String(id))
+            if(target<0)return
+                setSelected(chats[target])
+                openChat()
+            // props.socket.off("read").emit("read", {chatId: String(chats[target]._id)})
+
+        }
         const handleAddChat = async(id: string) =>{
             const exists  = chats.findIndex(c=>c._id === String(id))
             if(exists >= 0)return;
@@ -81,7 +91,7 @@ const ChatsPage = (props: prop) =>{
                 }
                 setErrorMessage(message)
             }))
-        },[])
+        },[bearerToken, dispatch])
 
         const handleSearch = () =>{
             const currentValue = searchRef.current?.value.toLowerCase();
@@ -105,29 +115,33 @@ const ChatsPage = (props: prop) =>{
             if(!selected)return;
             if(!data.file && !data.body.length)return;
             props.socket.emit("message", {body: data.body, chatId: selected!._id, file: data.file})
+
         }
 
-        props.socket.on("message",(data: message_type)=>{
+        props.socket.off("message").on("message",(data: message_type)=>{
             displayMessage(data)
+            // if(String(selected?._id)===String(data.chatId)){
+            //     props.socket.off("read").emit("read",{chatId: data.chatId})
+            // }
         })
 
-        props.socket.on("read", data=>{
-            const chatId = data.chatId
-            const indx = chats.findIndex(c=>String(c._id)===String(chatId))
-            if(indx < 0)return;
-            const target = chats[indx]
-            const upMsg = [...target.messages].map(c=>{
-                const c_c = {...c}
-                const c_timestamp = {...c_c.timestamp}
-                c_c.timestamp = c_timestamp
-                c_c.timestamp.readAt = Date.now()
-                return c_c
-            })
-            const updatedChat = {...target, messages: [...upMsg]}
-            const updatedChats = [...chats]
-            updatedChats[indx] = updatedChat
-            dispatch(setChats(updatedChats))
-        })
+        // props.socket.off("read").on("read", data=>{
+        //     const chatId = data.chatId
+        //     const indx = chats.findIndex(c=>String(c._id)===String(chatId))
+        //     if(indx < 0)return;
+        //     const target = chats[indx]
+        //     const upMsg = [...target.messages].map(c=>{
+        //         const c_c = {...c}
+        //         const c_timestamp = {...c_c.timestamp}
+        //         c_c.timestamp = c_timestamp
+        //         c_c.timestamp.readAt = Date.now()
+        //         return c_c
+        //     })
+        //     const updatedChat = {...target, messages: [...upMsg]}
+        //     const updatedChats = [...chats]
+        //     updatedChats[indx] = updatedChat
+        //     dispatch(setChats(updatedChats))
+        // })
 
         return <div className="chats-page" >
             <AppHead />
@@ -136,10 +150,27 @@ const ChatsPage = (props: prop) =>{
                 <p className="err" >{errorMessage}</p>:
                 !chats?
                 <p className="null">no chats yet</p>:
-                <ChatsList handleSearch={handleSearch} users={usersState} handleChatClick={handleChatClick} handleAddChat={handleAddChat} searchRef={searchRef} message={errorMessage} chats={chatState} />
+                <ChatsList 
+                handleSearch={handleSearch} 
+                users={usersState} 
+                handleChatClick={handleChatClick} 
+                handleAddChat={handleAddChat} 
+                searchRef={searchRef} 
+                message={errorMessage} 
+                chats={chatState}
+                open={
+                    friendListOpen
+                }
+                 />
             }
-            <div className="chat-wrapper" >
-                <Chat displayMessage={displayMessage} emitMessage={emitMessage} profile={selected?.friend} messages={selected?.messages} />
+            <div className={`chat-wrapper ${!(window.innerWidth <= 820)?"": chatOpen}`} >
+                <Chat 
+                displayMessage={displayMessage} 
+                emitMessage={emitMessage} 
+                profile={selected?.friend} 
+                messages={selected?.messages} 
+                handleChatClose={closeChat}
+                />
             </div>
         </div>
 }

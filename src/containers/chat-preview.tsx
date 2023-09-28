@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import Chat from "./chat";
-import {useAppSelector, useAppDispatch} from "./store/hooks";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./styles/chat-preview.css"
@@ -14,6 +13,7 @@ const url = process.env.REACT_APP_API_URL + "/chats"
 
 interface prop{
     socket: app_socket_type
+    handleChatClose:()=>void
 }
 
 const ChatPreview = (props: prop) =>{
@@ -44,7 +44,7 @@ const ChatPreview = (props: prop) =>{
     return <div className="chatpreview">
         {errorMessage? 
         <p className="err">{ errorMessage }</p>:
-        <Chat displayMessage={displayMessage} emitMessage={emitMessage} profile={chat?.friend} messages={chat?.messages} />}
+        <Chat handleChatClose={props.handleChatClose} displayMessage={displayMessage} emitMessage={emitMessage} profile={chat?.friend} messages={chat?.messages} />}
     </div>
 }
 

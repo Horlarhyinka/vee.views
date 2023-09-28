@@ -1,5 +1,5 @@
 .chats-list .searchbar{
-    display: block !important;
+    display: block;
     height: 32px;
 }
 
@@ -41,4 +41,16 @@
     width: 98%;
     overflow-x: scroll;
     /* height: 145px; */
+}
+
+
+@media screen and (max-width:820px){
+    .chats-list{
+        display: inline-block;
+        width: 100%;
+        max-width: 98%;
+    }
+    .chats-list.false{
+        display: none;
+    }
 }

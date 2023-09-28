@@ -1,6 +1,8 @@
 import React from "react";
-import robo_earth from "../public/robo_earth.png";
-import "./styles/friend-card.css"
+import "./styles/friend-card.css";
+import default_img from "../public/default_img.png";
+import { useAppSelector } from "../containers/store/hooks";
+import { trimTosize } from "../utils/funcs";
 
 interface state{
 
@@ -17,21 +19,24 @@ interface props{
     unread: number
 }
 
-class FriendCard extends React.Component<props, state>{
-    render(){
-        return <div className="friend-card" onClick={(e)=>this.props.handleChatClick(this.props.id)}>
-            <img className="avatar" src={robo_earth} alt="avatar" />
+const FriendCard = (props: props)=>{
+    const chats = useAppSelector(state=>state.chat.chats)
+    const chat = chats.find(c=>String(c._id)===String(props.id))
+
+        return <div className="friend-card" onClick={(e)=>props.handleChatClick(props.id)}>
+            <img className="avatar" src={default_img} alt="avatar" />
             <div className="card-info">
-            <p className="username" >{this.props.username}</p>
-            <p className="message">{!this.props.lastMessage?
-             "no messages yet": 
-             this.props.lastMessage?.length >24?
-             this.props.lastMessage.slice(0,24)+"...": 
-             this.props.lastMessage}</p>
+            <p className="username" >{props.username}</p>
+            <p className="message">{
+                trimTosize(!chat?.messages.length?
+                "no message yet":
+                chat.messages[chat.messages.length - 1].file?
+                `${props.username} sent a file`:
+                chat.messages[chat.messages.length - 1].body, 24)
+            }</p>
             </div>
-            {Number(this.props.unread) < 1?"":<span className="notification"></span>}
         </div>
     }
-}
+
 
 export default FriendCard;

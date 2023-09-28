@@ -25,10 +25,10 @@
 
 .not-friend-card button{
     width: 95%;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.404);
     border-radius: 16px;
-    background-color: rgb(0, 0, 255);
+    /* background-color: rgb(0, 0, 255); */
     color: white;
-    height: 26px;
+    height: 28px;
     font-weight: 600;
 }

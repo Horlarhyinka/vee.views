@@ -54,14 +54,10 @@ class PostCard extends React.Component<props, state>{
 
     render(){
         return <div className="post-card">
-            {/* <a href={`${API_BASE_URL}/users/${this.props.postedBy._id}`} className="profile">
-                <img src={this.props.postedBy.avatar} alt="" className="avatar" />
-                <p className="username">{this.props.postedBy.username}</p>
-            </a> */}
             <ProfileCardMini user={this.props.postedBy} />
             <a href={`/posts/${this.props.id}`} >
                 <p className="body">{this.props.body}</p>
-                {this.props.file && <img src={this.props.file.thumbnail} />}
+                {this.props.file && <img src={this.props.file.url} />}
                 <aside className="post-time">{this.props.postedAt}</aside>
             </a>
                 <div className="actions">

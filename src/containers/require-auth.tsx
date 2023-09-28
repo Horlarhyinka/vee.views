@@ -7,7 +7,6 @@ const initialToken = getToken()
 const [token, setToken] = useState(initialToken)
 useEffect(()=>{
 setToken(initialToken)
-
 },[initialToken])
     return <>{!token? <Login />: params.NodeElement}</>
 }

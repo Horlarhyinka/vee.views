@@ -2,7 +2,7 @@ import {Socket, io} from "socket.io-client";
 import { user_int } from "../containers/store/auth";
 
 
-export type file_type = {name: string, size: number, url: string, thumbnail?: string}
+export type file_type = {name: string, size: number, url: string}
 export interface message_type {body: string, file?: file_type, chatId: string, sentBy: string, _id: string, timestamp: timestamp_type}
 export type post_input_type = {body: string, file?: file_type, replyTo?: string}
 export interface post_type extends post_input_type{

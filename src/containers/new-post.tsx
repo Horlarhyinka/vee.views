@@ -49,14 +49,14 @@ const NewPost = (props: props)=>{
             }
         const url = await toBase64(target)
         const thumbnail = await generateThumbnail({url, type})
-        const file: file_type = {url, thumbnail, name, size}
+        const file: file_type = {url: thumbnail as string, name, size}
             setFile(file)
     }
 
         return <div className="new-post">
             {props.replyTo && <p className="reply-to">replying to <span>@{props.replyTo}</span> post</p>}
             <form>
-                {file && <img src={(file as file_type).thumbnail} alt={(file as file_type).name} className="file-preview" />}
+                {file && <img src={(file as file_type).url} alt={(file as file_type).name} className="file-preview" />}
                 <input type="file"
                  onChange={(e)=>handleFileSelect(e)} 
                  ref={fileRef} />

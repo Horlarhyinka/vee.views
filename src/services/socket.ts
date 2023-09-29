@@ -54,7 +54,7 @@ interface socket_data{
 
 
 const useSocket = (authToken: string) =>{
-    const socket:Socket<server_to_client_events, client_to_server_events> = io("http://localhost:8000",{ auth: {token: authToken} })
+    const socket:Socket<server_to_client_events, client_to_server_events> = io( process.env.REACT_APP_API_HOST,{ auth: {token: authToken} })
     return socket
 }
 export default useSocket
